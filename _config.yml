@@ -1,11 +1,11 @@
 # Version of the Icarus theme that is currently used
 version: 2.3.0
 # Path or URL to the website's icon
-favicon: /images/favicon.svg
+favicon: http://cdn.lzx0906.cn/images/favicon.svg
 # Path or URL to RSS atom.xml
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
-logo: /images/logo.svg
+logo: http://cdn.lzx0906.cn/images/logo.svg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
@@ -72,12 +72,12 @@ donate:
         # Donation entry name
         type: alipay
         # Qrcode image URL
-        qrcode: '/donate/alipay.jpg'
+        qrcode: 'http://cdn.lzx0906.cn/donate/alipay.jpg'
     -
         # Donation entry name
         type: wechat
         # Qrcode image URL
-        qrcode: '/donate/wechat.jpg'
+        qrcode: 'http://cdn.lzx0906.cn/donate/wechat.jpg'
 # Share plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins
 share:
