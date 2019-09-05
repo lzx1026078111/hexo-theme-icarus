@@ -111,7 +111,7 @@ widgets:
         # Author's current location to be shown in the profile widget
         location: Beijing China
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: 
+        avatar: 'http://cdn.lzx0906.cn/images/avatar.png'
         # Email address for the Gravatar to be shown in the profile widget
         gravatar: 
         # Whether to show avatar image rounded or square
