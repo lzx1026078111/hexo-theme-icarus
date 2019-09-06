@@ -1,11 +1,11 @@
 # Version of the Icarus theme that is currently used
 version: 2.3.0
 # Path or URL to the website's icon
-favicon: http://cdn.lzx0906.cn/images/favicon.svg
+favicon: https://cdn.lzx0906.cn/images/favicon.svg
 # Path or URL to RSS atom.xml
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
-logo: http://cdn.lzx0906.cn/images/logo.svg
+logo: https://cdn.lzx0906.cn/images/logo.svg
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
@@ -72,12 +72,12 @@ donate:
         # Donation entry name
         type: alipay
         # Qrcode image URL
-        qrcode: 'http://cdn.lzx0906.cn/donate/alipay.jpg'
+        qrcode: 'https://cdn.lzx0906.cn/donate/alipay.jpg'
     -
         # Donation entry name
         type: wechat
         # Qrcode image URL
-        qrcode: 'http://cdn.lzx0906.cn/donate/wechat.jpg'
+        qrcode: 'https://cdn.lzx0906.cn/donate/wechat.jpg'
 # Share plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins
 share:
@@ -111,7 +111,7 @@ widgets:
         # Author's current location to be shown in the profile widget
         location: Beijing China
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: 'http://cdn.lzx0906.cn/images/avatar.png'
+        avatar: 'https://cdn.lzx0906.cn/images/avatar.png'
         # Email address for the Gravatar to be shown in the profile widget
         gravatar: 
         # Whether to show avatar image rounded or square

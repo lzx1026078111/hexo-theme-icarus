@@ -142,7 +142,7 @@ module.exports = function (hexo) {
             url += '.js';
         }
         if(!url.startsWith('http')){
-            url ='http://cdn.lzx0906.cn/' + url
+            url ='https://cdn.lzx0906.cn/' + url
         }
         return `<script src="${urlFor(url)}"${async ? ' async' : ''}${defer ? ' defer' : ''}></script>`;
     });
@@ -153,7 +153,7 @@ module.exports = function (hexo) {
             url += '.css';
         }
         if(!url.startsWith('http')){
-            url ='http://cdn.lzx0906.cn/' + url
+            url ='https://cdn.lzx0906.cn/' + url
         }
         return `<link rel="stylesheet" href="${urlFor(url)}">`;
     });
