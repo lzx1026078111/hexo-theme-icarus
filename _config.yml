@@ -27,6 +27,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
+        Resume: /resume
         About: /about
     # Navigation bar links to be shown on the right
     links:
@@ -111,7 +112,7 @@ widgets:
         # Author's current location to be shown in the profile widget
         location: Beijing China
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: 'https://cdn.lzx0906.cn/images/avatar.png'
+        avatar: 'https://cdn.lzx0906.cn/images/20190915212741.jpg'
         # Email address for the Gravatar to be shown in the profile widget
         gravatar: 
         # Whether to show avatar image rounded or square
