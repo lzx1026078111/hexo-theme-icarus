@@ -106,11 +106,11 @@ widgets:
         # Where should the widget be placed, left or right
         position: left
         # Author name to be shown in the profile widget
-        author: Li Zongxing
+        author: Xing Du
         # Title of the author to be shown in the profile widget
-        author_title: Student
+        author_title: Software Engineer
         # Author's current location to be shown in the profile widget
-        location: Beijing China
+        location: Shanghai China
         # Path or URL to the avatar to be shown in the profile widget
         avatar: 'https://cdn.lzx0906.cn/images/20190915212741.jpg'
         # Email address for the Gravatar to be shown in the profile widget

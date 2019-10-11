@@ -11,6 +11,8 @@ common:
     post:
         one: '文章'
         other: '文章'
+    about: '关于'
+    resume: '简历'
     prev: '上一页'
     next: '下一页'
 widget:
