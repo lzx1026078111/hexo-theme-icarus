@@ -27,7 +27,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        Resume: /resume
+        Share: /share
         About: /about
     # Navigation bar links to be shown on the right
     links:
