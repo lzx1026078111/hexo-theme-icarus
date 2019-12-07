@@ -127,6 +127,8 @@ img.thumbnail
         margin-right: 0
     .menu-list a.level
         display: flex
+    .has-text-centered figure.image
+        margin: auto
 
 .pagination
     .pagination-link:not(.is-current), .pagination-previous, .pagination-next
@@ -367,6 +369,13 @@ figure.highlight
 
     table
         width: auto
+
+        tr td
+                border: none
+        tr:not(:first-child) td
+            padding-top: 0
+        tr:not(:last-child) td
+            padding-bottom: 0
 
     pre
         padding: 0
