@@ -3,6 +3,7 @@ const MetaTags = require('hexo-component-inferno/lib/view/misc/meta');
 const WebApp = require('hexo-component-inferno/lib/view/misc/web_app');
 const OpenGraph = require('hexo-component-inferno/lib/view/misc/open_graph');
 const StructuredData = require('hexo-component-inferno/lib/view/misc/structured_data');
+const { toMomentLocale } = require('hexo/dist/plugins/helper/date');
 const Plugins = require('./plugins');
 
 const fontFamily=`/* cyrillic-ext */
@@ -156,7 +157,7 @@ module.exports = class extends Component {
 
         const noIndex = helper.is_archive() || helper.is_category() || helper.is_tag();
 
-        const language = page.lang || page.language || config.language;
+        const language = toMomentLocale(page.lang || page.language || config.language || 'en');
         const fontCssUrl = {
             default: fontcdn('Ubuntu:wght@400;600&family=Source+Code+Pro', 'css2'),
             cyberpunk: fontcdn('Oxanium:wght@300;400;600&family=Roboto+Mono', 'css2')
@@ -267,30 +268,37 @@ module.exports = class extends Component {
                 updated={page.updated}
                 images={structuredImages}/> : null}
 
+            <script src={cdn('jquery', '3.3.1', 'dist/jquery.min.js')} async></script>
             <link data-pjax rel="stylesheet" href={url_for('/css/' + variant + '.css')}/>
-            {canonical_url ? <link rel="canonical" href={canonical_url} /> : null}
-            {rss ? <link rel="alternate" href={url_for(rss)} title={config.title} type="application/atom+xml" /> : null}
-            {favicon ? <link rel="icon" href={url_for(favicon)} /> : null}
+            {canonical_url ? <link rel="canonical" href={canonical_url}/> : null}
+            {rss ? <link rel="alternate" href={url_for(rss)} title={config.title} type="application/atom+xml"/> : null}
+            {favicon ? <link rel="icon" href={url_for(favicon)}/> : null}
             <link rel="preload" href={iconcdn().replace('css/all.min.css', 'webfonts/fa-solid-900.woff2')} as="font"
                   type="font/woff2" crossorigin/>
             <link rel="preload" href={iconcdn().replace('css/all.min.css', 'webfonts/fa-brands-400.woff2')} as="font"
                   type="font/woff2" crossorigin/>
-            <link rel="stylesheet" href={iconcdn()} />
+            <link rel="stylesheet" href={iconcdn()}/>
+
+            <script src={cdn('moment', '2.22.2', 'min/moment.min.js')} defer></script>
+            <script src={cdn('moment', '2.22.2', 'locale/' + language + '.js')} defer></script>
+
             {hlTheme ? <link data-pjax rel="stylesheet"
                              href={cdn('highlight.js', '11.7.0', 'styles/' + hlTheme + '.css')}/> : null}
 
             {/*字体速度优化*/}
             <link rel="preconnect" href={'https://gstatic.loli.net'}/>
-            <style dangerouslySetInnerHTML={{__html:fontFamily}}></style>
-            <link rel="stylesheet" href={fontCssUrl[variant]} />
+            <style dangerouslySetInnerHTML={{__html: fontFamily}}></style>
+            {/*<link rel="stylesheet" href={fontCssUrl[variant]} />*/}
 
 
             <Plugins site={site} config={config} helper={helper} page={page} head={true}/>
 
             {adsenseClientId ? <script data-ad-client={adsenseClientId}
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script> : null}
+                                       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                                       async></script> : null}
 
-            {followItVerificationCode ? <meta name="follow.it-verification-code" content={followItVerificationCode} /> : null}
+            {followItVerificationCode ?
+                <meta name="follow.it-verification-code" content={followItVerificationCode}/> : null}
         </head>;
     }
 };
